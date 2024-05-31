@@ -1,0 +1,22 @@
+[project]
+name = "gpn-guestbook"
+version = "0.1.0"
+description = "Please no haxorino!"
+authors = ["Chrisliebär <mail@chrisliebaer.de>"]
+channels = [
+	"conda-forge",
+]
+platforms = ["win-64"]
+
+[tasks]
+dev = "uvicorn guestbook:app --reload --port 3000"
+
+
+[dependencies]
+python = "3.12.*"
+colorlog = "6.8.*"
+fastapi = "0.111.*"
+pydantic = "2.7.*"
+uvicorn = "0.30.*"
+
+[pypi-dependencies]
